@@ -12,12 +12,12 @@ const Contact = lazy(() => import("./Contact"));
 
 const Home: React.FC = () => {
   return (
-    <div className="relative pl-20 bg-[#0a0a0a]">
+    <div className="relative bg-[#0a0a0a]">
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
+      <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
         
-        {/* Large Decorative Text (Vertical) */}
-        <div className="absolute right-10 top-1/2 -translate-y-1/2 flex flex-col items-center space-y-12 pointer-events-none opacity-[0.03]">
+        {/* Large Decorative Text (Vertical) - Hidden on mobile */}
+        <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center space-y-12 pointer-events-none opacity-[0.03]">
           <span className="text-8xl font-black rotate-90 text-white tracking-[0.5em] whitespace-nowrap uppercase">FRONTEND DEVELOPER</span>
         </div>
 

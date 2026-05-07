@@ -50,10 +50,10 @@ const About: React.FC = () => {
         ))}
       </div>
       
-      {/* Ghost Text */}
+      {/* Ghost Text - Hidden on mobile */}
       <motion.div 
         style={{ opacity: textOpacity }}
-        className="absolute top-1/2 left-0 -translate-y-1/2 -rotate-90 pointer-events-none opacity-[0.02]"
+        className="absolute top-1/2 left-0 -translate-y-1/2 -rotate-90 pointer-events-none opacity-[0.02] hidden md:block"
       >
         <span className="text-[15vw] font-black text-white uppercase tracking-widest whitespace-nowrap">ABOUT ME</span>
       </motion.div>
@@ -61,15 +61,16 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
           
-          {/* Left Side: Parallax Image Section */}
+          {/* Left Side: Image Section */}
           <div className="w-full lg:w-[45%] relative">
+            {/* Accent box - Hidden on mobile or made smaller */}
             <motion.div 
-              style={{ y: yellowY }}
-              className="absolute -left-6 top-12 bottom-12 w-32 bg-[#00D1FF] z-0" 
+              style={{ y: typeof window !== 'undefined' && window.innerWidth > 768 ? yellowY : 0 }}
+              className="absolute -left-4 md:-left-6 top-8 md:top-12 bottom-8 md:bottom-12 w-24 md:w-32 bg-[#00D1FF] z-0" 
             />
             
             <motion.div 
-              style={{ y: imageY }}
+              style={{ y: typeof window !== 'undefined' && window.innerWidth > 768 ? imageY : 0 }}
               className="relative z-10"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl relative">
@@ -77,13 +78,13 @@ const About: React.FC = () => {
                   initial={{ scale: 1.2, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1.5, ease: "easeOut" }}
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
+                  src="/apple-touch-icon.png" 
                   alt="Farhad Reja"
                   className="w-full h-full object-cover"
                 />
                 
-                <div className="absolute top-8 left-8 bg-[#111] px-6 py-2 border border-white/10">
-                  <span className="text-[10px] font-black tracking-[0.4em] text-white uppercase">REJA.</span>
+                <div className="absolute top-4 md:top-8 left-4 md:left-8 bg-[#111] px-4 md:px-6 py-2 border border-white/10">
+                  <span className="text-[9px] md:text-[10px] font-black tracking-[0.4em] text-white uppercase">REJA.</span>
                 </div>
               </div>
 
@@ -91,7 +92,7 @@ const About: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -left-12 top-0 text-[#00D1FF] text-9xl font-black opacity-20 select-none"
+                className="absolute -left-8 md:-left-12 top-0 text-[#00D1FF] text-7xl md:text-9xl font-black opacity-20 select-none"
               >
                 //
               </motion.div>

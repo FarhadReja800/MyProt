@@ -54,40 +54,41 @@ const TechnicalExperience: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        {/* Tech Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8">
           {techStack.map((tech, index) => (
             <motion.div
               key={tech.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              whileHover={{ scale: 1.05, y: -10 }}
+              transition={{ delay: index * 0.05, duration: 0.5 }}
+              whileHover={{ scale: 1.05, y: -5 }}
               className="group relative"
             >
-              <div className="relative z-10 flex flex-col items-center p-8 rounded-[2.5rem] bg-[#111111]/40 border border-white/5 backdrop-blur-sm hover:border-[#00D1FF]/30 transition-all duration-500 overflow-hidden shadow-2xl">
+              <div className="relative z-10 flex flex-col items-center p-4 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-[#111111]/40 border border-white/5 backdrop-blur-sm hover:border-[#00D1FF]/30 transition-all duration-500 overflow-hidden shadow-2xl">
                 
                 {/* Glow Effect on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#00D1FF]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Original Logo with "Football" Style Container */}
-                <div className="relative w-20 h-20 mb-6 flex items-center justify-center">
-                  {/* Outer Orbit Ring */}
+                <div className="relative w-12 h-12 md:w-20 md:h-20 mb-3 md:mb-6 flex items-center justify-center">
+                  {/* Orbiting Ring */}
                   <div className="absolute inset-0 rounded-full border border-white/10 group-hover:border-[#00D1FF]/50 group-hover:scale-110 transition-all duration-700" />
                   
                   {/* Inner Logo Circle */}
-                  <div className="w-16 h-16 rounded-full bg-white/5 p-3 flex items-center justify-center group-hover:bg-white/10 transition-all duration-500 shadow-xl overflow-hidden">
+                  <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white/5 p-2 md:p-3 flex items-center justify-center group-hover:bg-white/10 transition-all duration-500 shadow-xl overflow-hidden">
                     <img 
                       src={`https://skillicons.dev/icons?i=${tech.icon}`} 
-                      alt={tech.name} 
-                      className="w-10 h-10 object-contain filter group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all"
+                      alt={tech.name}
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
                 
                 <div className="text-center relative z-10">
-                  <h3 className="text-[11px] font-black tracking-widest text-white uppercase mb-1">{tech.name}</h3>
-                  <p className="text-[8px] font-bold tracking-[0.2em] text-gray-500 group-hover:text-[#00D1FF] transition-colors">
+                  <h3 className="text-[9px] md:text-[11px] font-black tracking-widest text-white uppercase mb-1">{tech.name}</h3>
+                  <p className="text-[7px] md:text-[8px] font-bold tracking-[0.2em] text-gray-500 group-hover:text-[#00D1FF] transition-colors">
                     {tech.category}
                   </p>
                 </div>

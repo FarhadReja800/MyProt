@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="fixed left-0 top-0 h-screen w-20 bg-[#111111] border-r border-white/5 flex flex-col items-center justify-between py-10 z-[60]">
+    <aside className="fixed left-0 top-0 h-screen w-20 bg-[#111111] border-r border-white/5 hidden md:flex flex-col items-center justify-between py-10 z-[60]">
       {/* Logo */}
       <Link to="/" className="group">
         <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center font-black text-white text-xl border border-white/10 group-hover:bg-[#00D1FF] group-hover:text-black transition-all">
