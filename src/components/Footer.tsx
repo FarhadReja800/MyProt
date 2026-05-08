@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       }}
     >
       <p style={{ margin: 0 }}>
-        © {new Date().getFullYear()} Niladri Chatterjee. All rights reserved.
+        © {new Date().getFullYear()} Farhad Reja. All rights reserved.
       </p>
       <div style={{ marginTop: "0.5rem", fontSize: "0.9rem" }}>
         Built with <span role="img" aria-label="heart">❤️</span> using React, TypeScript, Vite.

@@ -21,14 +21,14 @@ export interface OfficeHours {
 }
 
 export const CONTACT_INFO: ContactInfo = {
-  email: 'code.niladri@gmail.com',
-  phone: '+916296554939',
-  whatsapp: '+916296554939',
-  location: 'Kolkata, West Bengal, India',
+  email: 'mdfarhadreja53@gmail.com',
+  phone: '+8801782736805',
+  whatsapp: '+8801782736805',
+  location: 'Dhaka, Bangladesh',
   timezone: 'IST (UTC+5:30)',
-  github: 'https://github.com/niladri-1',
-  linkedin: 'https://linkedin.com/in/niladri1',
-  twitter: '@niladri_dev',
+  github: 'https://github.com/farhadreja800',
+  linkedin: 'https://linkedin.com/in/farhadreja',
+  twitter: '@farhadreja',
 }
 
 export const OFFICE_HOURS: OfficeHours = {

@@ -73,9 +73,9 @@ function SEOUpdater(): null {
 
   useEffect(() => {
     const meta = pageMeta[location.pathname] || {
-      title: "Niladri Chatterjee - Full Stack Developer",
+      title: "Farhad Reja - Full Stack Developer",
       description:
-        "Portfolio of Niladri Chatterjee — Full Stack Developer specializing in MERN stack and modern web technologies.",
+        "Portfolio of Farhad Reja — Full Stack Developer specializing in MERN stack and modern web technologies.",
     };
 
     document.title = meta.title;
@@ -93,14 +93,14 @@ function SEOUpdater(): null {
     if (ogUrl)
       ogUrl.setAttribute(
         "content",
-        `https://niladri1.vercel.app${location.pathname}`,
+        `https://farhadreja.vercel.app${location.pathname}`,
       );
 
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical)
       canonical.setAttribute(
         "href",
-        `https://niladri1.vercel.app${location.pathname}`,
+        `https://farhadreja.vercel.app${location.pathname}`,
       );
   }, [location]);
 

@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
 
 # Farhad Reja — Portfolio 🚀
 
@@ -204,4 +204,4 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <h3>⭐ Star this repo if you found it helpful!</h3>
 
-</div>
+</div> -->

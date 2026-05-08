@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PencilRuler, Mail, Phone, MapPin, Clock, Github, Linkedin, MessageCircle } from "lucide-react";
+import { CONTACT_INFO } from "@/config/contact";
 
 const Contact: React.FC = () => {
   return (
@@ -41,7 +42,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Email</p>
-                  <p className="text-white font-medium">code.niladri@gmail.com</p>
+                  <p className="text-white font-medium">{CONTACT_INFO.email}</p>
                 </div>
               </div>
 
@@ -51,7 +52,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Phone</p>
-                  <p className="text-white font-medium">+916296554939</p>
+                  <p className="text-white font-medium">{CONTACT_INFO.phone}</p>
                 </div>
               </div>
 
@@ -61,7 +62,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Location</p>
-                  <p className="text-white font-medium">Kolkata, West Bengal, India</p>
+                  <p className="text-white font-medium">{CONTACT_INFO.location}</p>
                 </div>
               </div>
 
@@ -71,7 +72,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Time Zone</p>
-                  <p className="text-white font-medium">IST (UTC+5:30)</p>
+                  <p className="text-white font-medium">{CONTACT_INFO.timezone}</p>
                 </div>
               </div>
             </div>
