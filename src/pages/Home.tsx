@@ -12,10 +12,18 @@ const Contact = lazy(() => import("./Contact"));
 
 const Home: React.FC = () => {
   return (
-    <div className="relative bg-[#0a0a0a]">
+    <div className="relative bg-transparent">
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-        
+          <div
+    className="absolute inset-0 bg-cover bg-left opacity-10"
+    style={{
+      backgroundImage: "url('BgIm.png')",
+    }}
+  />
+
+  {/* Dark overlay (optional but recommended) */}
+  <div className="absolute inset-0 bg-black/55" />
         {/* Large Decorative Text (Vertical) - Hidden on mobile */}
         <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center space-y-12 pointer-events-none opacity-[0.03]">
           <span className="text-8xl font-black rotate-90 text-white tracking-[0.5em] whitespace-nowrap uppercase">FRONTEND DEVELOPER</span>
@@ -26,22 +34,22 @@ const Home: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="max-w-4xl w-full z-10"
+          transition={{ duration: 0.5 }}
+          className="max-w-6xl w-full z-10"
         >
           <div className="space-y-2 mb-8">
-            <div className="w-12 h-[2px] bg-[#00D1FF] mb-6" />
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+            <div className="w-12 h-[2px] bg-[#C7A750] mb-6" />
+            <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">
               Hey there!
             </h2>
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight">
-              I'm <span className="text-white">Farhad Reja</span>
+            <h1 className="text-2xl md:text-4xl font-black text-white leading-tight">
+              I'm <span className="text-gray-500 ">Farhad Reja</span>
             </h1>
-            <h1 className="text-4xl md:text-7xl font-black leading-tight">
+            <h1 className="text-3xl md:text-6xl font-black mt-2 leading-tight">
               <span className="text-white">Independent</span>{" "}
-              <span className="text-[#00D1FF]">
+              <span className="text-[#C7A750]">
                 <TypingAnimation
-                  words={["Frontend Developer", "UI/UX Specialist", "MERN Stack Expert"]}
+                  words={[ "Full-Stack Engineer", ]}
                   typeSpeed={100}
                   deleteSpeed={50}
                   pauseDelay={3000}
@@ -53,7 +61,7 @@ const Home: React.FC = () => {
           </div>
 
           <p className="text-lg md:text-xl text-gray-500 font-serif italic mb-12 max-w-xl">
-            I create high-end web applications and professional user experiences with a focus on visual excellence.
+           We create every screen, feature, and interaction with a combination of perfect planning and modern technology, so that every digital experience is fast, smooth, and user-centric.
           </p>
 
           <motion.div
@@ -63,7 +71,7 @@ const Home: React.FC = () => {
           >
             <a
               href="#portfolio"
-              className="px-12 py-5 bg-[#00D1FF] text-black font-black text-xs tracking-[0.3em] uppercase hover:bg-white transition-all shadow-2xl shadow-[#00D1FF]/20"
+              className="px-8 py-3 bg-[#C7A750] text-white font-black text-xs rounded-md tracking-[0.3em] uppercase hover:bg-[#C7A750]/80 transition-all shadow-2xl shadow-[#C7A750]/20"
             >
               Let's Start
             </a>

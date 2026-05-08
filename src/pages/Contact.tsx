@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-[#FF5722] rounded-lg mb-6 transform rotate-45">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-[#C7A750] rounded-lg mb-6 transform rotate-45">
             <div className="-rotate-45 text-white">
               <PencilRuler size={24} />
             </div>
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Office Hours Box */}
-            <div className="bg-[#1a1b1e] border border-white/5 rounded-2xl p-8 shadow-2xl">
+            {/* <div className="bg-[#1a1b1e] border border-white/5 rounded-2xl p-8 shadow-2xl">
               <h2 className="text-xl font-bold text-white mb-6">Office Hours</h2>
               <div className="space-y-3 text-sm text-gray-400 font-light">
                 <div className="flex justify-between">
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                   <span className="text-white">Closed</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Side: Contact Form */}
@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="w-full py-4 bg-[#FF5722] text-white font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-[#F4511E] transition-all shadow-xl shadow-orange-500/20 rounded-xl"
+                  className="w-full py-4 bg-[#C7A750] text-white font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-[#C7A750]/80 transition-all shadow-xl shadow-orange-500/20 rounded-xl"
                 >
                   Send Message
                 </motion.button>

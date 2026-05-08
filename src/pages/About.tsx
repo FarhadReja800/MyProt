@@ -40,7 +40,7 @@ const About: React.FC = () => {
     <section 
       ref={containerRef}
       id="about" 
-      className="relative min-h-screen py-32 bg-[#050505] overflow-hidden"
+      className="relative min-h-screen py-40 bg-transparent overflow-hidden"
     >
       
       {/* Background Vertical Lines */}
@@ -53,9 +53,9 @@ const About: React.FC = () => {
       {/* Ghost Text - Hidden on mobile */}
       <motion.div 
         style={{ opacity: textOpacity }}
-        className="absolute top-1/2 left-0 -translate-y-1/2 -rotate-90 pointer-events-none opacity-[0.02] hidden md:block"
+        className="absolute left-0 -translate-y-1/3 -rotate-90 pointer-events-none opacity-40 hidden md:block"
       >
-        <span className="text-[15vw] font-black text-white uppercase tracking-widest whitespace-nowrap">ABOUT ME</span>
+        <span className="text-[15vw]  font-black text-gray-600 uppercase ">ABOUT ME</span>
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -78,9 +78,9 @@ const About: React.FC = () => {
                   initial={{ scale: 1.2, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1.5, ease: "easeOut" }}
-                  src="/apple-touch-icon.png" 
+                  src="/About.png" 
                   alt="Farhad Reja"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-center opacity-black/20 "
                 />
                 
                 <div className="absolute top-4 md:top-8 left-4 md:left-8 bg-[#111] px-4 md:px-6 py-2 border border-white/10">
@@ -135,7 +135,7 @@ const About: React.FC = () => {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="text-gray-500 font-serif italic text-xl leading-relaxed max-w-xl"
               >
-                I am a dedicated Frontend Developer based in Dhaka, specializing in building high-end digital experiences. With a focus on visual excellence and technical precision.
+                I'm a Fullstack Developer with 3+ years of experience and 1+ year working in industrial projects, focused on building fast, reliable, and high-performance websites. I enjoy working with React and Next.js on the frontend, using TailwindCSS to create clean and responsive UIs that feel smooth and modern. On the backend, I work with Node.js, Express, and NestJS to build well-structured APIs and services. I'm comfortable with PostgreSQL, SQL, MongoDB, and Supabase, so I can design solid databases and handle both relational and document-based data. I also use GitHub for version control and follow good practices to keep the code clean, maintainable, and easy to scale. My goal is to turn client ideas into working, high-quality web applications that perform well and are easy to update over time.
               </motion.p>
             </div>
 
@@ -173,10 +173,9 @@ const About: React.FC = () => {
             >
               <a 
                 href="#portfolio"
-                className="group relative inline-flex items-center justify-center px-12 py-5 overflow-hidden font-black text-black bg-[#00D1FF] transition-all duration-300 hover:bg-white rounded-sm"
+                className="px-8 py-3 bg-[#C7A750] text-white font-black text-xs rounded-md tracking-[0.3em] uppercase hover:bg-[#f1d37f] transition-all shadow-2xl shadow-[#C7A750]/20"
               >
-                <span className="absolute left-0 w-0 h-full bg-white transition-all duration-300 group-hover:w-full -z-10" />
-                <span className="text-xs tracking-[0.4em] uppercase">My Portfolio</span>
+                My Portfolio
               </a>
             </motion.div>
           </div>

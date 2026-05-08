@@ -1,6 +1,6 @@
-import { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Background3D from "./components/Background3D.tsx";
+import AIParticleBackground from "./components/AIParticleBackground.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Sidebar from "./components/Sidebar.tsx";
 import Footer from "./components/Footer.tsx";
@@ -8,13 +8,13 @@ import Loading from "./components/Loading.tsx";
 import Experience from "./pages/Experience.tsx";
 import Skills from "./pages/Skills.tsx";
 import Projects from "./pages/Projects.tsx";
-import Certificates from "./pages/Certificates.tsx";
+
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const Home = lazy(() => import("./pages/Home.tsx"));
 const About = lazy(() => import("./pages/About.tsx"));
-const Education = lazy(() => import("./pages/Education.tsx"));
+// const Education = lazy(() => import("./pages/Education.tsx"));
 const TechnicalExperience = lazy(() => import("./pages/TechnicalExperience.tsx"));
 
 
@@ -108,24 +108,26 @@ function SEOUpdater(): null {
 }
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <BrowserRouter>
       <SEOUpdater />
-      <div className="bg-[#111111] min-h-screen selection:bg-[#FFC107] selection:text-black">
-        <Background3D />
-        <Sidebar />
-        <Navbar />
-        <main className="relative pl-0 md:pl-20">
+      <div className="min-h-screen selection:bg-[#FFC107] selection:text-black">
+        <AIParticleBackground />
+        <Sidebar isMenuOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(!isMenuOpen)} />
+        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <main className="relative pl-16 md:pl-20">
           <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/education" element={<Education />} />
+              {/* <Route path="/education" element={<Education />} /> */}
               <Route path="/experience" element={<Experience />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/tech-stack" element={<TechnicalExperience />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/certificates" element={<Certificates />} />
+              {/* <Route path="/certificates" element={<Certificates />} /> */}
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
