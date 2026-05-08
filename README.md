@@ -1,6 +1,6 @@
 <div align="center">
 
-# Niladri Chatterjee — Portfolio 🚀
+# Farhad Reja — Portfolio 🚀
 
 [![Website](https://img.shields.io/website?label=Live%20Portfolio&style=for-the-badge&url=https%3A%2F%2Fniladri1.vercel.app)](https://niladri1.vercel.app)
 [![GitHub followers](https://img.shields.io/github/followers/niladri-1?logo=github&style=for-the-badge)](https://github.com/niladri-1)
@@ -11,13 +11,13 @@
   <img src="https://skillicons.dev/icons?i=react,vite,typescript,tailwind,nodejs,mongodb,express,git" alt="Tech Stack Icons" />
 </p>
 
-<h3>Full Stack Developer · MERN Stack Specialist · Kolkata, India</h3>
+<h3>Full Stack Developer · MERN Stack Specialist · Dhaka, Bangladesh</h3>
 
 [🌐 View Live](https://niladri1.vercel.app) · [🐛 Report Bug](https://github.com/niladri-1/Software-Dev-Portfolio/issues) · [✨ Request Feature](https://github.com/niladri-1/Software-Dev-Portfolio/issues)
 
 <br/>
 
-<img src="https://niladri1.vercel.app/og-image.png" alt="Niladri Chatterjee Portfolio Preview" width="80%" style="border-radius: 12px;" />
+<img src="/apple-touch-icon.png" alt="Niladri Chatterjee Portfolio Preview" width="80%" style="border-radius: 12px;" />
 
 </div>
 
